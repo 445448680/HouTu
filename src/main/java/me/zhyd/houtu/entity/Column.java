@@ -73,8 +73,7 @@ public class Column {
     }
 
     public String getJavaType() {
-        String columnName = DbUtil.makeAllWordFirstLetterUpperCase(this.columnName);
-        return TypeMapping.getJavaType(columnName);
+        return TypeMapping.getJavaType(columnType);
     }
 
     /**
@@ -89,7 +88,7 @@ public class Column {
      * 得到尽可能简短的javaType的名称，如果是java.lang.String,将返回String, 如com.company.model.UserInfo,将返回 com.company.model.UserInfo
      */
     public String getPossibleShortJavaType() {
-        if (getJavaType().startsWith("java.lang.") || getJavaType().startsWith("java.util.")) {
+        if (getJavaType().startsWith("java.lang.") || getJavaType().startsWith("java.util.") || getJavaType().startsWith("java.sql.")) {
             return DbUtil.getJavaClassSimpleName(getJavaType());
         } else {
             return getJavaType();

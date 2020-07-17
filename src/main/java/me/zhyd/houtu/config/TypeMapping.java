@@ -35,13 +35,13 @@ public class TypeMapping {
         mapping.put(Types.BINARY, "byte[]");
         mapping.put(Types.VARBINARY, "byte[]");
         mapping.put(Types.LONGVARBINARY, "byte[]");
-        mapping.put(Types.DATE, "java.sql.Date");
-        mapping.put(Types.TIME, "java.sql.Time");
-        mapping.put(Types.TIMESTAMP, "java.sql.Timestamp");
-        mapping.put(Types.CLOB, "java.sql.Clob");
-        mapping.put(Types.BLOB, "java.sql.Blob");
-        mapping.put(Types.ARRAY, "java.sql.Array");
-        mapping.put(Types.REF, "java.sql.Ref");
+        mapping.put(Types.DATE, "java.util.Date");
+        mapping.put(Types.TIME, "java.util.Date");
+        mapping.put(Types.TIMESTAMP, "java.util.Date");
+        mapping.put(Types.CLOB, "java.lang.String");
+        mapping.put(Types.BLOB, "java.lang.String");
+        mapping.put(Types.ARRAY, "String[]");
+        mapping.put(Types.REF, "java.lang.Object");
         mapping.put(Types.STRUCT, "java.lang.Object");
         mapping.put(Types.JAVA_OBJECT, "java.lang.Object");
 
