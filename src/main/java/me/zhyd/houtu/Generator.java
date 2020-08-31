@@ -9,8 +9,8 @@ import me.zhyd.houtu.entity.Table;
 import me.zhyd.houtu.entity.Template;
 import me.zhyd.houtu.util.FreemarkerUtil;
 import me.zhyd.houtu.util.ListUtil;
-import me.zhyd.houtu.util.TemplateUtil;
 import me.zhyd.houtu.util.StringUtils;
+import me.zhyd.houtu.util.TemplateUtil;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -104,9 +104,9 @@ public class Generator {
 
             this.generateFiles(itemTemplate);
         }
-        if (!this.generateAll) {
-            this.helper.destroy();
-        }
+//        if (!this.generateAll) {
+//            this.helper.destroy();
+//        }
     }
 
     public void generateAll() {
@@ -117,6 +117,20 @@ public class Generator {
         }
         this.helper.destroy();
         generateAll = false;
+    }
+
+    public void generateByPrefix(String prefix) {
+        if (null == prefix) {
+            generateAll();
+            return;
+        }
+        List<Table> tables = this.helper.listAllTable();
+        for (Table table : tables) {
+            if (table.getTableName().startsWith(prefix)) {
+                this.generate(table);
+            }
+        }
+        this.helper.destroy();
     }
 
     private void generateFiles(List<Template> files) {

@@ -15,6 +15,9 @@ import java.sql.Types;
 @AllArgsConstructor
 public enum JdbcType {
 
+    /**
+     * 数据库数据类型
+     */
     BIT(Types.BIT),
     TINYINT(Types.TINYINT),
     SMALLINT(Types.SMALLINT),
@@ -58,6 +61,9 @@ public enum JdbcType {
     }
 
     public static JdbcType getJdbcTypeBySqlType(String sqlType) {
+        if ("int".equalsIgnoreCase(sqlType)) {
+            return INTEGER;
+        }
         for (JdbcType type : values()) {
             if (sqlType.equalsIgnoreCase(type.name())) {
                 return type;
