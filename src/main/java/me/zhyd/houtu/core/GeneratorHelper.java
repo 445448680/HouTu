@@ -242,6 +242,8 @@ public class GeneratorHelper {
                 if (Arrays.asList("decimal", "double", "float").contains(column.getColumnType())) {
                     column.setLength(rs.getInt("numeric_precision"));
                     column.setScale(rs.getInt("numeric_scale"));
+                } else if (Arrays.asList("text", "tinytext", "mediumtext", "longtext", "blob", "tinyblob", "mediumblob", "longblob").contains(column.getColumnType())) {
+                    column.setLength(0);
                 } else {
                     column.setLength(rs.getInt("character_maximum_length"));
                 }
