@@ -32,6 +32,7 @@
 ## 快速开始
 
 模板参考 `doc/template`
+
 ### 声明入口类
 
 ```java
@@ -186,6 +187,67 @@ g.generate("sys_user");
 | `javaType` | `String` | java.lang.String | 列对应的Java数据类型 |  |    
 | `possibleShortJavaType` | `String` | String |  |  |    
 | `extra` | `String` | auto_increment | 额外参数，auto_increment表自增 |  |    
+
+### 模板可用完整参数示例 JSON
+
+```json
+{
+	"primaryKeyType": "String",
+	"classPrefix": "",
+	"basePackage": "com.zyd.blog",
+	"mapperPackage": "com.zyd.blog.persistence.mapper",
+	"templatePath": "template/",
+	"url": "jdbc:mysql://127.0.0.1:3306/dblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false",
+	"clearClassPrefix": "",
+	"password": "root",
+	"driver": "com.mysql.cj.jdbc.Driver",
+	"outRootDir": "D:\\project\\java\\gitee\\OneBlog\\blog-codegen\\generator-output",
+	"db": "dblog",
+	"table": {
+		"className": "BizAd",
+		"classNameFirstLower": "bizAd",
+		"classNameFirstUpper": "BizAd",
+		"coding": "utf8_general_ci",
+		"columns": [{
+			"columnName": "id",
+			"columnNameFirstLower": "id",
+			"columnNameFirstUpper": "Id",
+			"columnType": "bigint",
+			"extra": "auto_increment",
+			"javaType": "java.lang.Long",
+			"jdbcType": "BIGINT",
+			"keyType": "PRI",
+			"length": 0,
+			"notNull": true,
+			"possibleShortJavaType": "Long",
+			"remark": "",
+			"tableName": "biz_ad"
+		}, {
+			"columnName": "content",
+			"columnNameFirstLower": "content",
+			"columnNameFirstUpper": "Content",
+			"columnType": "varchar",
+			"extra": "",
+			"javaType": "java.lang.String",
+			"jdbcType": "VARCHAR",
+			"keyType": "",
+			"length": 300,
+			"notNull": false,
+			"possibleShortJavaType": "String",
+			"remark": "广告内容（简介）",
+			"tableName": "biz_ad"
+		}],
+		"createTime": "2021-10-27 16:56:13",
+		"db": "dblog",
+		"engine": "InnoDB",
+		"remark": "广告",
+		"tableName": "biz_ad",
+		"type": "BASE TABLE"
+	},
+	"beansPackage": "com.zyd.blog.persistence.beans",
+	"username": "root"
+}
+```
 
 
 ## 待完成的功能
