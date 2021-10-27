@@ -8,7 +8,6 @@ import org.junit.Test;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/4/27 11:41
  * @since 1.0.0
  */
 public class JsonTest {

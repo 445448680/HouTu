@@ -8,7 +8,6 @@ import me.zhyd.houtu.util.DbUtil;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/4/26 18:17
  * @since 1.0.0
  */
 @Data
@@ -58,6 +57,7 @@ public class Column {
 
     /**
      * 第一个字母小写的columName,等价于: StringHelper.uncapitalize(getColumnName()),示例值: birthDate
+     * @return String
      **/
     public String getColumnNameFirstUpper() {
         String columnName = DbUtil.makeAllWordFirstLetterUpperCase(this.columnName);
@@ -66,6 +66,7 @@ public class Column {
 
     /**
      * 第一个字母小写的columName,等价于: StringHelper.uncapitalize(getColumnName()),示例值: birthDate
+     * @return String
      **/
     public String getColumnNameFirstLower() {
         String columnName = DbUtil.makeAllWordFirstLetterUpperCase(this.columnName);
@@ -78,6 +79,7 @@ public class Column {
 
     /**
      * 得到 jdbcSqlType类型名称，示例值:VARCHAR,DECIMAL, 现Ibatis3使用该属性
+     * @return String
      */
     public String getJdbcType() {
         JdbcType jdbcType = JdbcType.getJdbcTypeBySqlType(columnType);
@@ -86,6 +88,7 @@ public class Column {
 
     /**
      * 得到尽可能简短的javaType的名称，如果是java.lang.String,将返回String, 如com.company.model.UserInfo,将返回 com.company.model.UserInfo
+     * @return String
      */
     public String getPossibleShortJavaType() {
         if (getJavaType().startsWith("java.lang.") || getJavaType().startsWith("java.util.") || getJavaType().startsWith("java.sql.")) {

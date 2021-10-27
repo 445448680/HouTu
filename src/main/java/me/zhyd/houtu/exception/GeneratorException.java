@@ -3,7 +3,6 @@ package me.zhyd.houtu.exception;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/4/26 20:28
  * @since 1.0.0
  */
 public class GeneratorException extends RuntimeException {

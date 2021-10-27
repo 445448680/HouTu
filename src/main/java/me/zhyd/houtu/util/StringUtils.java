@@ -5,7 +5,6 @@ package me.zhyd.houtu.util;
  *
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/5/7 0:31
  * @since 1.0.0
  */
 public class StringUtils {

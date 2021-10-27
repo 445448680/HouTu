@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/4/26 18:16
  * @since 1.0.0
  */
 @Data
@@ -67,6 +66,7 @@ public class Table {
     /**
      * 设置类前缀
      *
+     * @param prefix 前缀
      * @return Table
      */
     public Table setClassNamePrefix(String prefix) {

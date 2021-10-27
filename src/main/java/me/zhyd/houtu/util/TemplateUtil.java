@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/4/26 22:21
  * @since 1.0.0
  */
 public class TemplateUtil extends cn.hutool.core.io.FileUtil {

@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
  *
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0.0
- * @date 2020/4/26 18:20
  * @since 1.0.0
  */
 @Slf4j
@@ -194,6 +193,7 @@ public class GeneratorHelper {
      * 获取表信息
      *
      * @param tableName 表名
+     * @return Table
      */
     public Table getTableInfo(String tableName) {
         return this.getTableInfo(tableName, this.config.getDb(), true);
@@ -205,6 +205,7 @@ public class GeneratorHelper {
      * @param tableName  表名
      * @param schema     数据库名
      * @param checkTable 是否校验表的合法性
+     * @return Table
      */
     public Table getTableInfo(String tableName, String schema, boolean checkTable) {
         if (checkTable) {
