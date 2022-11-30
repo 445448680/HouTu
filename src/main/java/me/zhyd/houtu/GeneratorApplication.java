@@ -36,11 +36,11 @@ public class GeneratorApplication {
         // 生成单个表的Java文件
 //        g.generate("log");
         // 生成多个表的Java文件
-        g.generate("test_code");
+//        g.generate("test_code");
         // 生成所有表的Java文件
 //        g.generate();
         // 生成所有表的Java文件
-//        g.generateAll();
+        g.generateAll();
         // 生成所有表的Java文件
 //        g.generateByPrefix("customer");
     }
