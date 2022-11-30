@@ -1,7 +1,7 @@
 package me.zhyd.houtu.util;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author GHS
  * @version 1.0
  * @since 1.8
  */

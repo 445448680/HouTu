@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 /**
  * 数据访问层，提供基本的数据库信息查询
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author GHS
  * @version 1.0.0
  * @since 1.0.0
  */

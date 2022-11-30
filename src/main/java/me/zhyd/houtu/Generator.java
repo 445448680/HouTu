@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author GHS
  * @version 1.0.0
  * @since 1.0.0
  */

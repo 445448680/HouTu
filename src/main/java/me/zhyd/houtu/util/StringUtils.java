@@ -3,7 +3,7 @@ package me.zhyd.houtu.util;
 /**
  * 字符串操作工具类
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author GHS
  * @version 1.0.0
  * @since 1.0.0
  */

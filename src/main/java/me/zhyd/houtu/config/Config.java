@@ -8,7 +8,7 @@ import me.zhyd.houtu.util.DbUtil;
 /**
  * 代码生成器配置文件:
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author GHS
  * @version 1.0.0
  * @since 1.0.0
  */
@@ -50,15 +50,15 @@ public class Config {
     /**
      * 根包名
      */
-    private String basePackage = "me.zhyd.light.core";
+    private String basePackage ;
     /**
      * beans包名
      */
-    private String beansPackage = basePackage + ".db.persistence.beans";
+    private String beansPackage ;
     /**
      * mapper接口包名
      */
-    private String mapperPackage = basePackage + ".db.persistence.mapper";
+    private String mapperPackage;
 
     /**
      * 文件输出路径

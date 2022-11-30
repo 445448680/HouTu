@@ -7,7 +7,7 @@ import me.zhyd.houtu.util.StringUtils;
 import java.util.List;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author GHS
  * @version 1.0.0
  * @since 1.0.0
  */
