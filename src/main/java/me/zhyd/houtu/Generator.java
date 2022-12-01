@@ -2,6 +2,7 @@ package me.zhyd.houtu;
 
 import cn.hutool.core.io.FileUtil;
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import me.zhyd.houtu.config.Config;
 import me.zhyd.houtu.core.GeneratorHelper;
@@ -93,19 +94,36 @@ public class Generator {
             params.put("table", table);
 
             List<Template> itemTemplate = ListUtil.deepClone(templates, Template.class);
+            List<Template> itemTemplateEnableList = Lists.newArrayList();
             for (Template template : itemTemplate) {
 
                 String filePath = FreemarkerUtil.template2String(template.getFilePath(), params, false);
-
                 template.setFilePath(filePath);
                 template.setFileContent(FreemarkerUtil.template2String(template.getFileContent(), params, false));
+                if(isEnabledTemplate(table.getTableName(),filePath)){
+                    itemTemplateEnableList.add(template);
+                }
             }
 
-            this.generateFiles(itemTemplate);
+            this.generateFiles(itemTemplateEnableList);
         }
 //        if (!this.generateAll) {
 //            this.helper.destroy();
 //        }
+    }
+
+    /**
+     * 可用模版
+     * @param tableName
+     * @param templatePath
+     * @return  如果是 关联_ref表 且不是DO/DO 的模版 则false不可用 其他可用ture
+     */
+    private boolean isEnabledTemplate(String tableName, String templatePath) {
+        boolean is = true;
+        if(tableName.endsWith("_ref")){
+            is= templatePath.endsWith("DTO.java") || templatePath.endsWith("DO.java");
+        }
+        return is;
     }
 
     public void generateAll() {
