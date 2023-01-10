@@ -3,6 +3,7 @@
 	<h1>HouTu</h1>
 </p>
 <p align="center">
+    <strong>转载于:https://gitee.com/yadong.zhang/HouTu</br></strong>
 	<strong>HouTu，一款基于MySQL的简单易用又功能强大的代码生成工具。取名后土，后土又名後土，源于母系社会自然崇拜中的土地与女性崇拜。其掌阴阳，育万物，因此被称为大地之母。本项目取名HouTu，取义“育万物”之意，通过定制Freemarker模板，可以生成任意结构化的代码，如 DO、Mapper、XML、Service、Controller、SQL、Html等等，只要你能写出模板，HouTu就能交付给你成品代码。</strong>
 </p>
 <p align="center">
